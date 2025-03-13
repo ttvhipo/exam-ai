@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam.net AI Assistant</title>
+  <style>
+    body {
+      width: 300px;
+      height: 400px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    h3 {
+      color: #FF8C00; /* Orange for exam.net theme */
+    }
+    #apiKey {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #chat {
+      height: 280px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    #input {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #FF8C00; /* Orange for exam.net theme */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #copy {
+      background-color: #FFA500; /* Slightly different orange */
+    }
+    p {
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .info {
+      background-color: #f1f1f1;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h3>Exam.net AI Assistant</h3>
+  <label for="apiKey">Mistral AI API Key:</label>
+  <input type="text" id="apiKey" placeholder="Enter your API key">
+  <button id="saveKey">Save</button>
+  
+  <div id="chat"></div>
+  
+  <input type="text" id="input" placeholder="Ask AI...">
+  <button id="send">Send</button>
+  <button id="copy">Copy</button>
+  
+  <p class="info">Press Ctrl+Shift+A on any page to open the assistant</p>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

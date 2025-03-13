@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Exam.net AI Assistant",
+  "version": "1.0",
+  "description": "AI assistant for exam.net",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
